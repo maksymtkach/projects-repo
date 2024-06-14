@@ -1,8 +1,10 @@
 const button = document.getElementById('btn');
-const color = document.querySelector('.color');
+const code = document.querySelector('code');
 
 button.addEventListener('click', () => {
-    document.body.style.background = `linear-gradient(to left, ${generateRandomColor()}, ${generateRandomColor()})`;
+    const style = `linear-gradient(to left, ${generateRandomColor()}, ${generateRandomColor()})`
+    document.body.style.background = style;
+    code.innerHTML = style;
 });
 
 
